@@ -4,8 +4,10 @@ import { StarField } from '@/components/ui/star-field';
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/sections/hero';
+import { About } from '@/components/sections/about';
 import { ProblemSolution } from '@/components/sections/problem-solution';
 import { Team } from '@/components/sections/team';
+import { Gallery } from '@/components/sections/gallery';
 import { Contact } from '@/components/sections/contact';
 
 const Index = () => {
@@ -39,8 +41,8 @@ const Index = () => {
   
   return (
     <div className="min-h-screen bg-space-black overflow-x-hidden">
-      {/* Enhanced Animated Star Background with shooting stars */}
-      <StarField starCount={250} glowIntensity={3.5} shootingStarFrequency={0.05} />
+      {/* Animated Star Background */}
+      <StarField />
       
       {/* Navbar */}
       <Navbar />
@@ -50,11 +52,17 @@ const Index = () => {
         {/* Hero Section */}
         <Hero />
         
+        {/* About Section */}
+        <About />
+        
         {/* Problem & Solution Section */}
         <ProblemSolution />
         
         {/* Team Section */}
         <Team />
+        
+        {/* Gallery Section */}
+        <Gallery />
         
         {/* Contact Section */}
         <Contact />
