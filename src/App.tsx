@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
+import Career from "./pages/Career";
+import News from "./pages/News";
 import NotFound from "./pages/NotFound";
 
 // Scroll to top when navigating
@@ -40,8 +42,10 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/news" element={<News />} />
           <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

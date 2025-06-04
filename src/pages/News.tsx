@@ -5,38 +5,38 @@ import { Footer } from '@/components/layout/footer';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { format } from 'date-fns';
 
-const Blog = () => {
-  const blogPosts = [
+const News = () => {
+  const newsArticles = [
     {
-      title: "The Future of Satellite Manufacturing in India",
-      excerpt: "Explore how India is positioning itself as a global leader in satellite technology and what this means for the future of space exploration.",
-      author: "Dr. Anand Kumar",
-      date: new Date("2023-10-15"),
-      category: "Industry Insights",
+      title: "Stellarix Space Announces Major Satellite Manufacturing Contract",
+      excerpt: "Our company has secured a significant contract to manufacture 50 nanosatellites for global IoT connectivity, marking a major milestone in our growth.",
+      author: "Press Team",
+      date: new Date("2023-11-15"),
+      category: "Company News",
       image: "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
     {
-      title: "Advancements in Microgravity Plant Cultivation",
-      excerpt: "Recent breakthroughs in growing food in space environments and how they could support long-duration space missions.",
+      title: "Breakthrough in Microgravity Plant Cultivation Research",
+      excerpt: "Our research team has achieved significant advances in growing food in space environments, bringing us closer to sustainable long-duration space missions.",
       author: "Dr. Priya Sharma",
-      date: new Date("2023-09-28"),
+      date: new Date("2023-10-28"),
       category: "Research",
       image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
     {
-      title: "How Small Satellites Are Revolutionizing Earth Observation",
-      excerpt: "The impact of miniaturized satellite technology on our ability to monitor climate change, urbanization, and natural disasters.",
+      title: "Stellarix Space Wins Innovation Award for Earth Observation Technology",
+      excerpt: "Recognition for our miniaturized satellite technology and its impact on climate monitoring and disaster response capabilities.",
       author: "Raj Patel",
-      date: new Date("2023-09-10"),
-      category: "Technology",
+      date: new Date("2023-10-10"),
+      category: "Awards",
       image: "https://images.unsplash.com/photo-1446776858070-70c3d5ed6758?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
     {
-      title: "Space Sustainability: Addressing the Orbital Debris Challenge",
-      excerpt: "Examining solutions to the growing problem of space debris and how responsible satellite design can help mitigate risks.",
+      title: "New Partnership for Sustainable Space Technology Development",
+      excerpt: "Stellarix Space partners with leading environmental organizations to develop solutions for space debris mitigation and responsible satellite design.",
       author: "Sunita Rao",
-      date: new Date("2023-08-22"),
-      category: "Sustainability",
+      date: new Date("2023-09-22"),
+      category: "Partnerships",
       image: "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     }
   ];
@@ -53,57 +53,57 @@ const Blog = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           <SectionHeading
-            overline="News & Insights"
-            title="Our Space Technology Blog"
-            description="The latest insights, research findings, and industry trends from the Stellarix Space team."
+            overline="Latest Updates"
+            title="Stellarix Space News"
+            description="Stay updated with the latest news, achievements, and developments from our space technology team."
           />
           
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {blogPosts.map((post, index) => (
+            {newsArticles.map((article, index) => (
               <article key={index} className="glass-card rounded-lg overflow-hidden group transition-transform hover:translate-y-[-8px] duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <img 
-                    src={post.image} 
-                    alt={post.title} 
+                    src={article.image} 
+                    alt={article.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-space-black to-transparent opacity-60"></div>
                   <div className="absolute bottom-4 left-4">
                     <span className="bg-stellar-blue/20 backdrop-blur-sm text-xs px-3 py-1 rounded-full text-white">
-                      {post.category}
+                      {article.category}
                     </span>
                   </div>
                 </div>
                 
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3 group-hover:text-stellar-blue transition-colors">
-                    {post.title}
+                    {article.title}
                   </h3>
                   <p className="text-white/70 mb-4">
-                    {post.excerpt}
+                    {article.excerpt}
                   </p>
                   
                   <div className="flex justify-between items-center mt-6">
                     <div className="flex items-center">
                       <div className="w-8 h-8 rounded-full bg-gradient-to-r from-stellar-blue to-stellar-cyan flex items-center justify-center text-white text-xs font-bold">
-                        {post.author.split(' ').map(name => name[0]).join('')}
+                        {article.author.split(' ').map(name => name[0]).join('')}
                       </div>
-                      <span className="ml-2 text-sm text-white/80">{post.author}</span>
+                      <span className="ml-2 text-sm text-white/80">{article.author}</span>
                     </div>
                     <span className="text-white/60 text-sm">
-                      {format(post.date, 'MMM d, yyyy')}
+                      {format(article.date, 'MMM d, yyyy')}
                     </span>
                   </div>
                 </div>
                 
-                <a href="#" className="absolute inset-0" aria-label={`Read more about ${post.title}`}></a>
+                <a href="#" className="absolute inset-0" aria-label={`Read more about ${article.title}`}></a>
               </article>
             ))}
           </div>
           
           <div className="mt-12 flex justify-center">
             <a href="#" className="px-6 py-2 rounded-full border border-white/20 hover:border-white/40 backdrop-blur-sm hover:bg-white/5 text-white font-medium transition-all hover:translate-y-[-2px]">
-              View All Articles
+              View All News
             </a>
           </div>
           
@@ -112,7 +112,7 @@ const Blog = () => {
               <div className="mb-6 md:mb-0 md:mr-8">
                 <h3 className="text-2xl font-bold mb-2">Subscribe to Our Newsletter</h3>
                 <p className="text-white/70">
-                  Stay updated with the latest news, research findings, and insights from our team.
+                  Stay updated with the latest news, research findings, and company announcements.
                 </p>
               </div>
               <div className="w-full md:w-auto">
@@ -138,4 +138,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default News;
