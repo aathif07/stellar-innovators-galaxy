@@ -35,12 +35,15 @@ export const Navbar = () => {
       <div className="container flex items-center justify-between">
         <Link 
           to="/" 
-          className="flex items-center space-x-2" 
+          className="flex items-center" 
           onClick={() => setIsMenuOpen(false)}
         >
-          <span className="font-bold text-xl text-white hover:opacity-80 transition-opacity">
-            Stellarix <span className="text-stellar-blue">Space</span>
-          </span>
+          {/* Logo PNG with increased size */}
+          <img 
+            src="\Stellar Logo .png" 
+            alt="Stellar Logo"
+            className="h-14 w-auto" // Increased from h-10 to h-14 (40% larger)
+          />
         </Link>
 
         {/* Desktop Menu */}

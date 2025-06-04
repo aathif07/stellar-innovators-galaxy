@@ -1,17 +1,111 @@
-
 import { ArrowDown } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20">
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-space-darker via-space-blue/50 to-space-purple/30"></div>
         
-        {/* Blue orbital path */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-stellar-blue/20 rounded-full opacity-30 animate-rotate-slow"></div>
+        {/* Outer orbital path (blue) - Enhanced */}
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border-2 border-stellar-blue rounded-full"
+          style={{
+            animation: 'rotate 30s linear infinite',
+            boxShadow: '0 0 40px rgba(63, 135, 255, 0.3)',
+            opacity: 0.5
+          }}
+        >
+          {/* Rocket on outer orbit */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{
+              animation: 'rotate 30s linear infinite reverse',
+              width: '24px',
+              height: '24px'
+            }}>
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path 
+                d="M12 2.5L8 7h8l-4-4.5zM8 7v5H5l3-5zm8 0v5h3l-3-5zm-8 5v5l3 5v-10zm8 0v5l-3 5v-10z" 
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
         
-        {/* Inner orbital path */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-stellar-cyan/10 rounded-full opacity-20" style={{ animationDuration: '15s' }}></div>
+        {/* Middle orbital path (cyan) - Enhanced */}
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] border-2 border-stellar-cyan rounded-full"
+          style={{
+            animation: 'rotate 25s linear infinite reverse',
+            boxShadow: '0 0 30px rgba(0, 255, 208, 0.25)',
+            opacity: 0.4
+          }}
+        >
+          {/* Rocket on middle orbit */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{
+              animation: 'rotate 25s linear infinite',
+              width: '20px',
+              height: '20px'
+            }}>
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path 
+                d="M12 2.5L8 7h8l-4-4.5zM8 7v5H5l3-5zm8 0v5h3l-3-5zm-8 5v5l3 5v-10zm8 0v5l-3 5v-10z" 
+                fill="#00FFD0"
+              />
+            </svg>
+          </div>
+        </div>
+        
+        {/* Inner orbital path (white) - Enhanced */}
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border-2 border-white rounded-full"
+          style={{
+            animation: 'rotate 20s linear infinite',
+            boxShadow: '0 0 25px rgba(255, 255, 255, 0.2)',
+            opacity: 0.3
+          }}
+        >
+          {/* Rocket on inner orbit */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{
+              animation: 'rotate 20s linear infinite reverse',
+              width: '16px',
+              height: '16px'
+            }}>
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path 
+                d="M12 2.5L8 7h8l-4-4.5zM8 7v5H5l3-5zm8 0v5h3l-3-5zm-8 5v5l3 5v-10zm8 0v5l-3 5v-10z" 
+                fill="#FFFFFF"
+              />
+            </svg>
+          </div>
+        </div>
+        
+        {/* Smallest orbital path (pink) - Enhanced */}
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border-2 border-pink-500 rounded-full"
+          style={{
+            animation: 'rotate 15s linear infinite reverse',
+            boxShadow: '0 0 20px rgba(255, 0, 255, 0.2)',
+            opacity: 0.25
+          }}
+        >
+          {/* Rocket on smallest orbit */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{
+              animation: 'rotate 15s linear infinite',
+              width: '12px',
+              height: '12px'
+            }}>
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path 
+                d="M12 2.5L8 7h8l-4-4.5zM8 7v5H5l3-5zm8 0v5h3l-3-5zm-8 5v5l3 5v-10zm8 0v5l-3 5v-10z" 
+                fill="#FF00FF"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
       
       <div className="container mx-auto px-6 py-12 relative z-10">
@@ -47,6 +141,30 @@ export const Hero = () => {
           <ArrowDown size={24} />
         </a>
       </div>
+
+      {/* Add this to your global CSS or in a style tag */}
+      <style jsx>{`
+        @keyframes rotate {
+          from {
+            transform: translate(-50%, -50%) rotate(0deg);
+          }
+          to {
+            transform: translate(-50%, -50%) rotate(360deg);
+          }
+        }
+        
+        .text-gradient {
+          background: linear-gradient(90deg, #3F87FF 0%, #00FFD0 50%, #FF00FF 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+        
+        .stellar-shadow {
+          box-shadow: 0 0 15px rgba(63, 135, 255, 0.5);
+        }
+      `}</style>
     </section>
   );
 };

@@ -1,5 +1,4 @@
-
-import { SectionHeading } from '../ui/section-heading';
+ import { SectionHeading } from '../ui/section-heading';
 
 export const ProblemSolution = () => {
   return (
@@ -92,78 +91,6 @@ export const ProblemSolution = () => {
                   <h4 className="text-lg font-medium mb-2">Sustainable Resources</h4>
                   <p className="text-white/80">
                     Solar-powered, closed-loop water recycling to reduce operational costs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-20">
-          <SectionHeading
-            title="Our Product - SS-PC1"
-            align="left"
-            className="mb-12"
-          />
-          
-          <div className="glass-card p-8 animate-fade-up">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-semibold mb-6">Specifications</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="w-24 text-sm font-medium text-white/60">Size</div>
-                    <div className="flex-1">100 cm x 100 cm x 200 cm (customizable)</div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-24 text-sm font-medium text-white/60">Weight</div>
-                    <div className="flex-1">115 kg</div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-24 text-sm font-medium text-white/60">Material</div>
-                    <div className="flex-1">6061-T6 aerospace-grade aluminum</div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-24 text-sm font-medium text-white/60">Power</div>
-                    <div className="flex-1">Solar/onboard energy systems (110V/220V AC)</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-semibold mb-6">Features</h3>
-                
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-stellar-blue mr-3"></div>
-                    <span>Advanced lighting system</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-stellar-blue mr-3"></div>
-                    <span>Precision robotic arm</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-stellar-blue mr-3"></div>
-                    <span>Automation & monitoring systems</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-stellar-blue mr-3"></div>
-                    <span>Water recycling technology</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-stellar-blue mr-3"></div>
-                    <span>Climate control system</span>
-                  </li>
-                </ul>
-                
-                <div className="mt-6">
-                  <h4 className="text-lg font-medium mb-3">Plant Varieties</h4>
-                  <p className="text-white/80">
-                    Legumes, pulses, leafy greens, herbs, vegetables, fruits
                   </p>
                 </div>
               </div>
