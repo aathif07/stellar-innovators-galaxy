@@ -7,6 +7,7 @@
     @apply antialiased overflow-x-hidden;
     font-family: 'Montserrat', 'SF Pro Display', sans-serif;
     background: 
+<<<<<<< HEAD
       radial-gradient(circle, rgba(0, 255, 208, 0.1) 2%, transparent 2%),
       linear-gradient(
         135deg, 
@@ -15,6 +16,12 @@
       );
     background-size: 4em 7em, 100% 100%;
     background-color: rgba(5, 10, 25, 0.95);
+=======
+      radial-gradient(circle, rgba(0, 255, 208, 0.2) 2%, transparent 2%),
+      linear-gradient(to bottom, #000015, #05050A);
+    background-size: 4em 7em, 100% 100%;
+    background-color: #000015;
+>>>>>>> parent of 3e58bc6 (Revert "Update background styles")
     background-attachment: fixed;
     color: #ffffff;
     scroll-behavior: smooth;
